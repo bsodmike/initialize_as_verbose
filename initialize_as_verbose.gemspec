@@ -1,22 +1,20 @@
+# encoding: utf-8
 $:.push File.expand_path("../lib", __FILE__)
-
-# Maintain your gem's version:
 require "initialize_as_verbose/version"
 
-# Describe your gem and declare its dependencies:
-Gem::Specification.new do |s|
-  s.name        = "initialize_as_verbose"
-  s.version     = InitializeAsVerbose::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of InitializeAsVerbose."
-  s.description = "TODO: Description of InitializeAsVerbose."
+Gem::Specification.new do |spec|
+  spec.name        = "initialize_as_verbose"
+  spec.version     = InitializeAsVerbose::VERSION
+  spec.authors     = ["Michael de Silva"]
+  spec.email       = ["michael@mwdesilva.com"]
+  spec.homepage    = "http://mwdesilva.com"
+  spec.summary     = "Boot Rails verbosely with initializer details."
+  spec.description = spec.summary
+  spec.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  spec.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 3.2.13"
-  # s.add_dependency "jquery-rails"
-
-  s.add_development_dependency "sqlite3"
+  spec.required_ruby_version = '>= 1.9.3'
+  spec.add_dependency "rails", "~> 3.2.13"
+  spec.add_development_dependency "pry"
 end
